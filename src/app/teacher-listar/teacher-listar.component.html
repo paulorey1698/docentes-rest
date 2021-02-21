@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Lista de Docentes</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID DOCENTE</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let teacher of teachers | async">
+                    <td>{{teacher.id}}</td>
+                    <td>{{teacher.name}}</td>
+                    <td>{{teacher.lastname}}</td>
+                    <td>{{teacher.email}}</td>
+                    <td>{{teacher.phone}}</td>
+                    <td>
+                        <button (click)="editarTeacher(teacher.id)" class="btn btn-success">Editar</button>
+                        <button (click)="eliminarTeacher(teacher.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        <button (click)="verTeacher(teacher.id)" class="btn btn-info" style="margin-left: 10px;">Detalles</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

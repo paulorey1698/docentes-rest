@@ -1,0 +1,24 @@
+<h2>Detalle de Docente</h2>
+<hr />
+<div *ngIf="teacher">
+
+    <div>
+        <label><b>Nombre:</b></label> {{teacher.name}}
+    </div>
+    <div>
+        <label><b>Apellido:</b></label> {{teacher.lastname}}
+    </div>
+
+    <div>
+        <label><b>Teléfono:</b></label> {{teacher.phone}}
+    </div>
+    <div>
+        <label><b>Email:</b></label> {{teacher.email}}
+    </div>
+
+    <br><br>
+    <button (click)="verListado()" class="btn btn-primary">
+        Regresar a la lista de docentes
+
+    </button>
+</div>
